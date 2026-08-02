@@ -1,10 +1,16 @@
 const products = [
-  { icon: "🥪", name: "Stacked sandwich", note: "Made fresh", price: "$6" },
-  { icon: "🍎", name: "Fruit cup", note: "Cold & crisp", price: "$3.50" },
-  { icon: "🥤", name: "Cold drinks", note: "Soda, tea, water", price: "from $1.50" },
-  { icon: "🍟", name: "Chips", note: "The crunchy shelf", price: "$2" },
-  { icon: "🍪", name: "Big cookie", note: "Soft-baked", price: "$2" },
-  { icon: "🍬", name: "Sweet stuff", note: "A little treat", price: "from $1" },
+  { name: "Turkey sandwich", price: "$6.00" },
+  { name: "Chicken wrap", price: "$6.50" },
+  { name: "Fresh fruit cup", price: "$3.50" },
+  { name: "Garden salad", price: "$5.50" },
+  { name: "Kettle chips", price: "$2.00" },
+  { name: "Yogurt parfait", price: "$4.00" },
+  { name: "Granola bar", price: "$2.25" },
+  { name: "Big cookie", price: "$2.00" },
+  { name: "Bottled lemonade", price: "$2.75" },
+  { name: "Cold soda", price: "$2.00" },
+  { name: "Bottled water", price: "$1.50" },
+  { name: "Fudge brownie", price: "$2.50" },
 ];
 
 export default function Home() {
@@ -81,23 +87,31 @@ export default function Home() {
       <section className="menu-section" id="menu">
         <div className="section-heading">
           <div>
-            <p className="eyebrow">The good shelf</p>
-            <h2>Grab it. Snack it. Go.</h2>
+            <p className="eyebrow">Fresh for lunch</p>
+            <h2>Today&apos;s menu</h2>
           </div>
-          <p>Stock changes with the day—ask Mia what&apos;s fresh.</p>
+          <p>Twelve easy picks for lunch, a snack, or something sweet.</p>
         </div>
 
         <div className="product-grid">
-          {products.map((product) => (
+          {products.map((product, index) => (
             <article className="product-card" key={product.name}>
-              <span className="product-icon" aria-hidden="true">{product.icon}</span>
-              <div>
+              <div
+                className={`product-photo photo-${index + 1}`}
+                role="img"
+                aria-label={`Photo of ${product.name}`}
+              />
+              <div className="product-info">
                 <h3>{product.name}</h3>
-                <p>{product.note}</p>
+                <strong>{product.price}</strong>
               </div>
-              <strong>{product.price}</strong>
             </article>
           ))}
+        </div>
+
+        <div className="pickup-banner" role="note" aria-label="Pickup information">
+          <span className="pickup-label">Pickup</span>
+          <strong>Pick up at Room 214, 12:15–12:45 PM.</strong>
         </div>
       </section>
 

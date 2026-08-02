@@ -91,12 +91,27 @@ h1 { margin-bottom: 23px; max-width: 690px; font-size: clamp(48px, 6vw, 82px); l
 .section-heading { display: flex; align-items: end; justify-content: space-between; gap: 32px; margin-bottom: 38px; }
 .section-heading h2, .visit-copy h2 { margin-bottom: 0; font-size: clamp(38px, 4vw, 58px); line-height: 1; letter-spacing: -.045em; }
 .section-heading > p { max-width: 310px; margin-bottom: 3px; color: #b9c4cc; font-family: Arial, sans-serif; font-size: 15px; line-height: 1.5; }
-.product-grid { display: grid; grid-template-columns: repeat(3, 1fr); border-top: 1px solid rgba(255,255,255,.25); border-left: 1px solid rgba(255,255,255,.25); }
-.product-card { min-height: 168px; display: grid; grid-template-columns: 64px 1fr; gap: 18px; padding: 28px; border-right: 1px solid rgba(255,255,255,.25); border-bottom: 1px solid rgba(255,255,255,.25); }
-.product-icon { width: 58px; height: 58px; display: grid; place-items: center; background: var(--cream); border: 2px solid var(--yellow); font-size: 29px; }
-.product-card h3 { margin-bottom: 6px; font-size: 18px; }
-.product-card p { margin: 0; color: #b9c4cc; font-family: Arial, sans-serif; font-size: 13px; }
-.product-card > strong { grid-column: 2; align-self: end; color: var(--yellow); font-size: 14px; }
+.product-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid rgba(255,255,255,.25); border-left: 1px solid rgba(255,255,255,.25); }
+.product-card { min-width: 0; background: #1d3a56; border-right: 1px solid rgba(255,255,255,.25); border-bottom: 1px solid rgba(255,255,255,.25); }
+.product-photo { width: 100%; aspect-ratio: 3 / 2; background-image: url("/menu-board.png"); background-size: 400% 400%; background-repeat: no-repeat; border-bottom: 1px solid rgba(255,255,255,.25); }
+.photo-1 { background-position: 0 33.333%; }
+.photo-2 { background-position: 33.333% 33.333%; }
+.photo-3 { background-position: 66.667% 33.333%; }
+.photo-4 { background-position: 100% 33.333%; }
+.photo-5 { background-position: 0 66.667%; }
+.photo-6 { background-position: 33.333% 66.667%; }
+.photo-7 { background-position: 66.667% 66.667%; }
+.photo-8 { background-position: 100% 66.667%; }
+.photo-9 { background-position: 0 100%; }
+.photo-10 { background-position: 33.333% 100%; }
+.photo-11 { background-position: 66.667% 100%; }
+.photo-12 { background-position: 100% 100%; }
+.product-info { min-height: 88px; display: flex; flex-direction: column; justify-content: space-between; gap: 14px; padding: 18px; }
+.product-card h3 { margin: 0; font-size: 16px; line-height: 1.2; }
+.product-info strong { color: var(--yellow); font-size: 15px; }
+.pickup-banner { margin-top: 30px; display: flex; align-items: center; justify-content: center; gap: 17px; padding: 22px 28px; background: var(--yellow); border: 3px solid var(--paper); color: var(--navy); box-shadow: 7px 7px 0 var(--red); text-align: center; }
+.pickup-banner strong { font-size: clamp(17px, 2vw, 24px); letter-spacing: -.02em; }
+.pickup-label { padding: 7px 10px; background: var(--red); color: white; border: 2px solid var(--navy); font-size: 10px; font-weight: 900; letter-spacing: .1em; text-transform: uppercase; transform: rotate(-2deg); }
 
 .visit-section { padding: 100px 24px; background-color: var(--yellow); background-image: linear-gradient(45deg, rgba(23,47,73,.08) 25%, transparent 25%), linear-gradient(-45deg, rgba(23,47,73,.08) 25%, transparent 25%), linear-gradient(45deg, transparent 75%, rgba(23,47,73,.08) 75%), linear-gradient(-45deg, transparent 75%, rgba(23,47,73,.08) 75%); background-size: 32px 32px; background-position: 0 0, 0 16px, 16px -16px, -16px 0; }
 .visit-card { width: min(100%, 1000px); margin: 0 auto; display: grid; grid-template-columns: 1fr 360px; gap: 80px; align-items: center; padding: 62px; background: var(--cream); border: 3px solid var(--navy); box-shadow: 10px 10px 0 var(--navy); }
@@ -129,7 +144,10 @@ footer { min-height: 82px; display: flex; align-items: center; justify-content: 
   .section-heading { display: block; }
   .section-heading > p { margin-top: 20px; }
   .product-grid { grid-template-columns: 1fr; }
-  .product-card { min-height: 140px; padding: 24px 20px; }
+  .product-card { display: grid; grid-template-columns: 42% 1fr; }
+  .product-photo { height: 100%; min-height: 150px; aspect-ratio: auto; border-bottom: 0; border-right: 1px solid rgba(255,255,255,.25); }
+  .product-info { min-height: 150px; padding: 22px; }
+  .pickup-banner { align-items: flex-start; flex-direction: column; text-align: left; }
   .visit-section { padding: 64px 16px; }
   .visit-card { grid-template-columns: 1fr; padding: 36px 24px; box-shadow: 7px 7px 0 var(--navy); }
   .receipt { width: 100%; max-width: 360px; margin: 0 auto; }
