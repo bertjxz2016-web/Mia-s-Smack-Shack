@@ -17,33 +17,32 @@ export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="Mia's Smack Shack home">
-          <span className="brand-mark">M</span>
-          <span>Mia&apos;s Smack Shack</span>
+        <a className="brand" href="#top" aria-label="The Snack Shack home">
+          <span className="brand-mark">S</span>
+          <span>The Snack Shack</span>
         </a>
         <nav aria-label="Main navigation">
           <a href="#menu">What&apos;s stocked</a>
-          <a className="nav-visit" href="#visit">Find Mia</a>
+          <a className="nav-visit" href="#visit">Find us</a>
         </nav>
       </header>
 
       <section className="hero" id="top">
         <div className="hero-copy">
-          <p className="eyebrow">Main quad&apos;s tiny lunch stop</p>
-          <h1>Big snack energy.<br />Right between classes.</h1>
+          <p className="eyebrow">Fast snacks on the main quad</p>
+          <h1>The Snack Shack.</h1>
           <p className="hero-intro">
-            Swing by Mia&apos;s little convenience shop for lunch, a cold drink,
-            and something sweet.
+            Grab lunch, a cold drink, or something sweet—and get back to your day.
           </p>
           <div className="hero-actions">
-            <a className="button button-primary" href="#menu">Shop the shelves</a>
-            <a className="button button-secondary" href="#visit">Plan your stop</a>
+            <a className="button button-primary" href="#menu">See the menu</a>
+            <a className="button button-secondary" href="https://www.google.com/maps/search/?api=1&query=655+Reitz+Union+Drive+Gainesville+FL+32611" target="_blank" rel="noreferrer">Get directions</a>
           </div>
 
           <dl className="quick-details" aria-label="Store details">
             <div>
               <dt>Where</dt>
-              <dd>Main quad</dd>
+              <dd>Reitz Union</dd>
             </div>
             <div>
               <dt>When</dt>
@@ -56,10 +55,10 @@ export default function Home() {
           </dl>
         </div>
 
-        <div className="storefront" aria-label="Illustration of Mia's convenience store">
+        <div className="storefront" aria-label="Illustration of The Snack Shack">
           <div className="store-sign">
-            <span className="sign-small">MIA&apos;S</span>
-            <strong>SMACK SHACK</strong>
+            <span className="sign-small">THE</span>
+            <strong>SNACK SHACK</strong>
             <span className="sign-tag">SNACKS · SIPS · LUNCH</span>
           </div>
           <div className="awning" aria-hidden="true">
@@ -111,7 +110,7 @@ export default function Home() {
 
         <div className="pickup-banner" role="note" aria-label="Pickup information">
           <span className="pickup-label">Pickup</span>
-          <strong>Pick up at Room 214, 12:15–12:45 PM.</strong>
+          <strong>Quick pickup at the Reitz Union, 12:15–12:45 PM.</strong>
         </div>
       </section>
 
@@ -119,15 +118,17 @@ export default function Home() {
         <div className="visit-card">
           <div className="visit-copy">
             <p className="eyebrow">Come say hi</p>
-            <h2>Your between-class pit stop.</h2>
+            <h2>Easy to find. Easy to grab and go.</h2>
             <p>
-              Find Mia on the <strong>Main quad</strong> at lunchtime,
+              Find us inside the <strong>J. Wayne Reitz Union</strong> at lunchtime,
               Tuesday through Friday. Bring cash and an appetite.
             </p>
+            <address>655 Reitz Union Drive<br />Gainesville, FL 32611</address>
+            <a className="button button-primary directions" href="https://www.google.com/maps/search/?api=1&query=655+Reitz+Union+Drive+Gainesville+FL+32611" target="_blank" rel="noreferrer">Open in Google Maps</a>
           </div>
           <div className="receipt" aria-label="Visit summary">
-            <div className="receipt-top">SMACK SHACK</div>
-            <p><span>LOCATION</span><strong>Main quad</strong></p>
+            <div className="receipt-top">THE SNACK SHACK</div>
+            <p><span>LOCATION</span><strong>Reitz Union</strong></p>
             <p><span>HOURS</span><strong>Lunch, Tue–Fri</strong></p>
             <p><span>PAYMENT</span><strong>Cash only</strong></p>
             <div className="receipt-total"><span>GOOD VIBES</span><strong>FREE</strong></div>
@@ -137,7 +138,7 @@ export default function Home() {
       </section>
 
       <footer>
-        <span>Mia&apos;s Smack Shack</span>
+        <span>The Snack Shack</span>
         <span>Made for hungry people on the go.</span>
       </footer>
     </main>
