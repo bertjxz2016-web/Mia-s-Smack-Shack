@@ -86,14 +86,14 @@ h1 { margin-bottom: 36px; font-size: clamp(52px, 8vw, 94px); line-height: .94; l
 .photo-2 { background-position: 33.333% 33.333%; }
 .photo-3 { background-position: 66.667% 33.333%; }
 .photo-4 { background-position: 100% 33.333%; }
-.photo-5 { background-position: 0 66.667%; }
-.photo-6 { background-position: 33.333% 66.667%; }
-.photo-7 { background-position: 66.667% 66.667%; }
-.photo-8 { background-position: 100% 66.667%; }
-.photo-9 { background-position: 0 100%; }
-.photo-10 { background-position: 33.333% 100%; }
-.photo-11 { background-position: 66.667% 100%; }
-.photo-12 { background-position: 100% 100%; }
+.photo-5 { background-position: 0 63%; }
+.photo-6 { background-position: 33.333% 63%; }
+.photo-7 { background-position: 66.667% 63%; }
+.photo-8 { background-position: 100% 63%; }
+.photo-9 { background-position: 0 94.5%; }
+.photo-10 { background-position: 33.333% 94.5%; }
+.photo-11 { background-position: 66.667% 94.5%; }
+.photo-12 { background-position: 100% 94.5%; }
 .product-info { min-height: 82px; display: flex; align-items: flex-end; justify-content: space-between; gap: 12px; padding: 17px; }
 .product-info h3 { margin: 0; font-size: 15px; line-height: 1.25; }
 .product-info strong { flex: 0 0 auto; color: var(--red); font-size: 15px; }
