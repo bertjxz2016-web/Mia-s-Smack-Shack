@@ -3,17 +3,17 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://mias-smack-shack.bertjxz2016.chatgpt.site"),
-  title: "The Snack Shack | Reitz Union",
-  description: "Fast snacks, drinks, and lunch at the Reitz Union, Tuesday through Friday.",
+  title: "Mia's Smack Shack | Room 214",
+  description: "Today's menu and pickup directions for Mia's Smack Shack at the Reitz Union.",
   openGraph: {
-    title: "The Snack Shack | Today's Menu",
-    description: "Today's lunch, snacks, and drinks from The Snack Shack.",
-    images: [{ url: "/og.png", width: 1536, height: 1024, alt: "The Snack Shack menu" }],
+    title: "Mia's Smack Shack | Today's Menu",
+    description: "Today's menu and pickup directions for Mia's Smack Shack.",
+    images: [{ url: "/og.png", width: 1536, height: 1024, alt: "Mia's Smack Shack menu" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Snack Shack | Today's Menu",
-    description: "Today's lunch, snacks, and drinks from The Snack Shack.",
+    title: "Mia's Smack Shack | Today's Menu",
+    description: "Today's menu and pickup directions for Mia's Smack Shack.",
     images: ["/og.png"],
   },
 };

@@ -13,83 +13,36 @@ const products = [
   { name: "Fudge brownie", price: "$2.50" },
 ];
 
+const indoorMapUrl =
+  "https://app.mappedin.com/map/67bdc505679a9d000bfacd1d?accessible=true&floor=m_7ab1b255329ddc17";
+const googleMapsUrl =
+  "https://www.google.com/maps/search/?api=1&query=655+Reitz+Union+Drive+Gainesville+FL+32611";
+
 export default function Home() {
   return (
     <main>
       <header className="site-header">
-        <a className="brand" href="#top" aria-label="The Snack Shack home">
-          <span className="brand-mark">S</span>
-          <span>The Snack Shack</span>
+        <a className="brand" href="#top" aria-label="Mia's Smack Shack home">
+          <span className="brand-mark">M</span>
+          <span>Mia&apos;s Smack Shack</span>
         </a>
-        <nav aria-label="Main navigation">
-          <a href="#menu">What&apos;s stocked</a>
-          <a className="nav-visit" href="#visit">Find us</a>
-        </nav>
+        <a className="header-directions" href="#directions">Directions</a>
       </header>
 
-      <section className="hero" id="top">
-        <div className="hero-copy">
-          <p className="eyebrow">Fast snacks on the main quad</p>
-          <h1>The Snack Shack.</h1>
-          <p className="hero-intro">
-            Grab lunch, a cold drink, or something sweet—and get back to your day.
-          </p>
-          <div className="hero-actions">
-            <a className="button button-primary" href="#menu">See the menu</a>
-            <a className="button button-secondary" href="https://www.google.com/maps/search/?api=1&query=655+Reitz+Union+Drive+Gainesville+FL+32611" target="_blank" rel="noreferrer">Get directions</a>
-          </div>
-
-          <dl className="quick-details" aria-label="Store details">
-            <div>
-              <dt>Where</dt>
-              <dd>Reitz Union</dd>
-            </div>
-            <div>
-              <dt>When</dt>
-              <dd>Lunch, Tue–Fri</dd>
-            </div>
-            <div>
-              <dt>Pay</dt>
-              <dd>Cash only</dd>
-            </div>
-          </dl>
-        </div>
-
-        <div className="storefront" aria-label="Illustration of The Snack Shack">
-          <div className="store-sign">
-            <span className="sign-small">THE</span>
-            <strong>SNACK SHACK</strong>
-            <span className="sign-tag">SNACKS · SIPS · LUNCH</span>
-          </div>
-          <div className="awning" aria-hidden="true">
-            {Array.from({ length: 7 }).map((_, index) => <span key={index} />)}
-          </div>
-          <div className="store-window">
-            <div className="window-note">OPEN FOR LUNCH</div>
-            <div className="shelf shelf-one" aria-hidden="true">
-              <span className="bottle yellow" /><span className="bag red" />
-              <span className="can blue" /><span className="bottle green" />
-            </div>
-            <div className="shelf shelf-two" aria-hidden="true">
-              <span className="box blue" /><span className="can yellow" />
-              <span className="bag green" /><span className="box red" />
-            </div>
-          </div>
-          <div className="store-door">
-            <span>CASH</span>
-            <i aria-hidden="true" />
-          </div>
-          <div className="counter-strip" aria-hidden="true" />
+      <section className="intro" id="top">
+        <p className="eyebrow">Today&apos;s lunch</p>
+        <h1>Mia&apos;s Smack Shack</h1>
+        <div className="store-facts" aria-label="Store information">
+          <span><small>Where</small>Reitz Union · Room 214</span>
+          <span><small>When</small>Lunch, Tue–Fri</span>
+          <span><small>Pay</small>Cash only</span>
         </div>
       </section>
 
       <section className="menu-section" id="menu">
         <div className="section-heading">
-          <div>
-            <p className="eyebrow">Fresh for lunch</p>
-            <h2>Today&apos;s menu</h2>
-          </div>
-          <p>Twelve easy picks for lunch, a snack, or something sweet.</p>
+          <p className="eyebrow">Available today</p>
+          <h2>Today&apos;s menu</h2>
         </div>
 
         <div className="product-grid">
@@ -109,38 +62,39 @@ export default function Home() {
         </div>
 
         <div className="pickup-banner" role="note" aria-label="Pickup information">
-          <span className="pickup-label">Pickup</span>
-          <strong>Quick pickup at the Reitz Union, 12:15–12:45 PM.</strong>
+          <span>Pickup</span>
+          <strong>Pick up at Room 214, 12:15–12:45 PM.</strong>
         </div>
       </section>
 
-      <section className="visit-section" id="visit">
-        <div className="visit-card">
-          <div className="visit-copy">
-            <p className="eyebrow">Come say hi</p>
-            <h2>Easy to find. Easy to grab and go.</h2>
-            <p>
-              Find us inside the <strong>J. Wayne Reitz Union</strong> at lunchtime,
-              Tuesday through Friday. Bring cash and an appetite.
-            </p>
-            <address>655 Reitz Union Drive<br />Gainesville, FL 32611</address>
-            <a className="button button-primary directions" href="https://www.google.com/maps/search/?api=1&query=655+Reitz+Union+Drive+Gainesville+FL+32611" target="_blank" rel="noreferrer">Open in Google Maps</a>
-          </div>
-          <div className="receipt" aria-label="Visit summary">
-            <div className="receipt-top">THE SNACK SHACK</div>
-            <p><span>LOCATION</span><strong>Reitz Union</strong></p>
-            <p><span>HOURS</span><strong>Lunch, Tue–Fri</strong></p>
-            <p><span>PAYMENT</span><strong>Cash only</strong></p>
-            <div className="receipt-total"><span>GOOD VIBES</span><strong>FREE</strong></div>
-            <small>THANK YOU! ★</small>
+      <section className="directions-section" id="directions">
+        <div>
+          <p className="eyebrow">Exact pickup location</p>
+          <h2>Directions</h2>
+        </div>
+        <div className="directions-card">
+          <address>
+            <strong>J. Wayne Reitz Union · Room 214</strong>
+            655 Reitz Union Drive<br />
+            Gainesville, FL 32611
+          </address>
+          <ol>
+            <li>Go to the J. Wayne Reitz Union.</li>
+            <li>Open the indoor map and search for <strong>Room 214</strong>.</li>
+            <li>Choose your entrance, then tap <strong>Directions</strong> for the exact indoor route.</li>
+          </ol>
+          <div className="direction-actions">
+            <a className="button button-primary" href={indoorMapUrl} target="_blank" rel="noreferrer">
+              Indoor directions
+            </a>
+            <a className="button button-secondary" href={googleMapsUrl} target="_blank" rel="noreferrer">
+              Directions to building
+            </a>
           </div>
         </div>
       </section>
 
-      <footer>
-        <span>The Snack Shack</span>
-        <span>Made for hungry people on the go.</span>
-      </footer>
+      <footer>Mia&apos;s Smack Shack · Lunch, Tue–Fri · Cash only</footer>
     </main>
   );
 }
